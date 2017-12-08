@@ -1,0 +1,26 @@
+﻿
+@{
+    ViewBag.Title = "Main";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="row">
+    <div class="col col-sm-12">
+        <div class="jumbotron text-center">
+            <h1 class="display-4">Data mining</h1> <p> це набір алгоритмів методів та засобів для видобування інформації з сирих, необроблених, даних для подальшого її опрацювання та використання у різних сферах людської діяльності.</p>
+        </div>
+
+    </div>
+
+</div>
+<div class="row">
+    <div class="col-sm-4">
+        @Html.ActionLink("Classification", "Classification", "Home", new { area = "" }, new { @class = "text-dark text-center" })
+    </div>
+    <div class="col-sm-4" style="border: 2px black solid">
+        @Html.ActionLink("Regression", "Regression", "Home", new { area = "" }, new { @class = "text-dark" , @style= "text-align: center;" })
+    </div>
+    <div class="col-sm-4">
+        @Html.ActionLink("Association", "Association", "Home", new { area = "" }, new { @class = "text-dark text-center" })
+    </div>
+</div>

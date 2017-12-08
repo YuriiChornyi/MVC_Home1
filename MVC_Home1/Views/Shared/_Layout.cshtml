@@ -1,0 +1,112 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Education</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <header>
+        <div class="jumbotron text-center">
+            <h1>Data mining</h1>
+            @*<img style="height: 11%;width: 11%" src="~/Content/Data_Mining.svg" />*@
+            <p>is everywhere!</p>
+        </div>
+    </header>
+
+
+    <div class="container-fluid container" style="border: 0px">
+        <div class="row">
+
+            <div class="col-sm-4">
+                <nav class="nav flex-column navbar-nav">
+                    @Html.ActionLink("Data mining ", "Index", "Home", new { area = "" }, new { @class = "navbar-brand nav-link active navbar-expand" })
+                    @Html.ActionLink("Classification", "Classification", "Home", new { area = "" }, new { @class = "nav-link" })
+                    @Html.ActionLink("Regression", "Regression", "Home", new { area = "" }, new { @class = "nav-link" })
+                    @Html.ActionLink("Association", "Association", "Home", new { area = "" }, new { @class = "nav-link" })
+                    
+                </nav>
+            </div>
+            <div class="col-sm-8">
+                @RenderBody()
+            </div>
+        </div>
+
+
+        <hr />
+        <footer>
+                <p class="text-center">&copy; @DateTime.Now.Year - DM portal</p>
+            </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
+
+
+
+@*div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                    <li>@Html.ActionLink("About", "About", "Home")</li>
+                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+        <div class="row" style="height:500px">
+            <div class="col-sm-3">
+                <div class="sidebar-nav">
+                    <div class="navbar navbar-default" role="navigation">
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-navbar-collapse">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            <span class="visible-xs navbar-brand">Sidebar menu</span>
+                        </div>
+                        <div class="navbar-collapse collapse, collapse">
+                            <ul class="nav navbar-nav">
+                                <li class="active"><a href="#">Menu Item 1</a></li>
+                                <li><a href="#">Menu Item 2</a></li>
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#">Action</a></li>
+                                        <li><a href="#">Another action</a></li>
+                                        <li><a href="#">Something else here</a></li>
+                                        <li class="divider"></li>
+                                        <li class="dropdown-header">Nav header</li>
+                                        <li><a href="#">Separated link</a></li>
+                                        <li><a href="#">One more separated link</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">Menu Item 4</a></li>
+                                <li><a href="#">Reviews <span class="badge">1,118</span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-9">
+                Main content goes here
+            </div>
+        </div>
+         </div>*@
